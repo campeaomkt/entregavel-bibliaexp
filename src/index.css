@@ -37,12 +37,17 @@
       margin: 0;
       box-shadow: none;
       page-break-after: always;
-      width: 100% !important;
-      height: 100% !important;
+      width: 210mm !important;
+      height: 297mm !important;
+      overflow: hidden;
     }
 
     .no-print {
       display: none;
+    }
+    .document-container {
+      gap: 0 !important;
+      padding: 0 !important;
     }
   }
 }

@@ -13,31 +13,29 @@ interface VerseBlockProps {
 }
 
 const VerseBlock = ({ verses, text, explanation }: VerseBlockProps) => (
-  <div className="space-y-4 mb-10 group">
+  <div className="space-y-2 mb-6 group">
     {/* Verse Header - Greenish Label */}
-    <div className="inline-block bg-[#d9f2d0] px-4 py-1.5 rounded-lg">
-      <h3 className="text-[#3a7c1b] font-black text-sm uppercase tracking-tight">Versículos {verses}</h3>
+    <div className="inline-block bg-[#d9f2d0] px-3 py-1 rounded-lg">
+      <h3 className="text-[#3a7c1b] font-black text-xs uppercase tracking-tight">Versículos {verses}</h3>
     </div>
     
     {/* Verse Text - Red/Italic */}
     <div className="flex gap-2">
-      <span className="text-xl leading-none mt-1">✍️</span>
-      <p className="text-[#d12c2c] italic font-bold text-sm leading-relaxed">
+      <span className="text-xl leading-none">✍️</span>
+      <p className="text-[#d12c2c] italic font-bold text-base leading-relaxed">
         {text}
       </p>
     </div>
     
     {/* Explanation - Green Checkmark style */}
-    <div className="space-y-2">
+    <div className="space-y-1">
       <div className="flex items-start gap-2">
-        <div className="bg-[#4CAF50] rounded-sm p-0.5 mt-0.5">
-          <CheckCircle2 className="w-3 h-3 text-white" />
+        <div className="bg-[#4CAF50] rounded-sm p-0.5 mt-0.5 shrink-0">
+          <CheckCircle2 className="w-3.5 h-3.5 text-white" />
         </div>
-        <div className="space-y-1">
-          <p className="text-sm leading-relaxed text-slate-700">
-            <span className="font-black text-[#3a7c1b]">Explicação:</span> {explanation}
-          </p>
-        </div>
+        <p className="text-[13px] leading-relaxed text-slate-700">
+          <span className="font-black text-[#3a7c1b]">Explicação:</span> {explanation}
+        </p>
       </div>
     </div>
   </div>
@@ -45,21 +43,21 @@ const VerseBlock = ({ verses, text, explanation }: VerseBlockProps) => (
 
 export default function PsalmVerses() {
   return (
-    <div id="content-page" className="page flex flex-col pt-12">
+    <div id="content-page" className="page flex flex-col pt-8">
       {/* Header */}
-      <div className="text-center mb-12 relative">
+      <div className="text-center mb-8 relative">
         <div className="absolute top-1/2 left-0 w-full h-px bg-gold/30 -z-10" />
-        <h2 className="bg-parchment px-8 inline-block text-2xl font-black text-burgundy uppercase tracking-widest border-x-4 border-burgundy">
+        <h2 className="bg-parchment px-6 inline-block text-xl font-black text-burgundy uppercase tracking-widest border-x-4 border-burgundy">
           Explicação Versículo por Versículo
         </h2>
       </div>
 
       {/* Content Grid */}
-      <div className="grid grid-cols-2 gap-x-12 gap-y-4 flex-1 relative">
+      <div className="grid grid-cols-2 gap-x-10 gap-y-2 flex-1 relative">
         {/* Vertical Separator Line */}
-        <div className="absolute left-1/2 top-4 bottom-4 w-px bg-gold/30 -translate-x-1/2 hidden md:block" />
+        <div className="absolute left-1/2 top-4 bottom-4 w-px bg-gold/20 -translate-x-1/2" />
         
-        <div className="flex flex-col">
+        <div className="flex flex-col pr-5">
           <VerseBlock 
             verses="1-2"
             text="Bem-aventurado o homem que não anda segundo o conselho dos ímpios, nem se detém no caminho dos pecadores, nem se assenta na roda dos escarnecedores. Antes tem o seu prazer na lei do Senhor, e na sua lei medita de dia e de noite."
@@ -73,7 +71,7 @@ export default function PsalmVerses() {
           />
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col pl-5">
           <VerseBlock 
             verses="4-5"
             text="Não são assim os ímpios; mas são como a moinha que o vento espalha. Por isso os ímpios não subsistirão no juízo, nem os pecadores na congregação dos justos."
