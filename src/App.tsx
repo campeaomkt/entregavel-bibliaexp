@@ -8,6 +8,8 @@ import { Printer, Download } from 'lucide-react';
 import Cover from './components/pages/Cover.tsx';
 import PsalmIntro from './components/pages/IntroPsalm.tsx';
 import PsalmVerses from './components/pages/PsalmVerses.tsx';
+import PsalmIntro2 from './components/pages/IntroPsalm2.tsx';
+import PsalmVerses2 from './components/pages/PsalmVerses2.tsx';
 
 export default function App() {
   const handlePrint = () => {
@@ -48,6 +50,8 @@ export default function App() {
         <Cover />
         <PsalmIntro />
         <PsalmVerses />
+        <PsalmIntro2 />
+        <PsalmVerses2 />
       </main>
 
       {/* Floating Scroll to Top / Navigation if needed */}
